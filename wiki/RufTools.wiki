@@ -1,0 +1,28 @@
+Extract DriftBox & PerformanceBox RUF files.
+It has not been tested with other firmware images, feel free to try it out.
+
+== How to compile: ==
+
+
+make all
+
+You need to have zlib1g-dev installed. apt-get is your friend.
+
+== How to use: ==
+
+
+./ruf_extract FIRMWARE.RUF
+
+Usually 3 files will be dumped:
+  * chunk_21.dat - 9 Bytes Long 
+    contains a string C00000000 (DriftBox) or N00000000 (Perf Box)
+  * chunk_30.dat - XXXX Bytes Long - contains an Intel HEX File, obviously the firmware. Checkout "strings chunk_30.dat"
+  * chunk_XXXX.dat - Where X depends on the size of chunk_30.dat - contains 4096 bytes of 0x0
+
+
+
+== RUF COMBINE HOWTO ==
+
+./ruf_combine filename.RUF header chunk1 pad_4096.dat tail
+
+will reassemble filename.RUF from the parts given, when u play with the IHEX file, make sure it contains DOS linebreaks (\r\n) (dos2unix helps) - as this is IHEX file convention ! (otherwise you want be able to flash it)
