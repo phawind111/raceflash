@@ -1,3 +1,2 @@
-Serial # in bootldr 0x40007FFC
-
-Model Type in bootlodr 0x40007FF0
+Serial # in bootldr flash - 0x40007FFC
+Model Type in bootldr flash - 0x40007FF0
