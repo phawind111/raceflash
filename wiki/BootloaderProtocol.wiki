@@ -51,7 +51,7 @@ No output is happening until you 'wake' it.
   * RX: 0xFF | 0x01 | 0x00 0x06 | 0x1C 0x55 |
 
   * 2 byte KEY value
-KEY Bytes = [ SEED Bytes ] CRC-CCIITT'ed with a poly value of 0x45DC
+KEY Bytes = ( SEED Bytes ) CRC-CCIITT'ed with a poly value of 0x45DC
 type of message 0x1 indicates that the unlock was successfull.
 
 
