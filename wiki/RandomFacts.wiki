@@ -1,0 +1,3 @@
+
+Serial # in bootldr 0x40007FFC
+Model Type in bootlodr 0x40007FF0
