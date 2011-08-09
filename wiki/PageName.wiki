@@ -1,0 +1,17 @@
+#Basic operation of firmware upgrade process
+
+= Basic Operation =
+
+The bootloader is located at 0x40000000-0x40007FFF (=32KB) of usable flash memory.
+It emulates a usbser.sys Serial Port with 115.2k/8/N/1 and responds only to certain messages.
+No output is happening until you 'wake' it.
+
+= Steps =
+
+<LI>Say Hello/Get Model type & serial number
+<LI>Get the SEED from the device
+<LI>Send the calculated key back to the device. (this really unlocks the bootloader flash application)
+<LI>Erase the flash areas
+<LI>Upload the new firmware to 0x40008000 onwards.
+<LI>Save the FLASH-Key to 0x400C3FFC, without it the bootloader will not start the uploaded firmware
+<LI>Close communication (reboot device)
