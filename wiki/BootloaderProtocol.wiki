@@ -77,8 +77,10 @@ the RX message will happen when the actual erase has been done (1-2 secs) Repeat
   * TX: 0xFF| 0x03 | 0x40 0x0A |  0x40 0x00 0x80 0x00 | 0x400 Data Bytes| CRC CRC |
   * RX: 0xFF| 0x01 | 0x00 0x06 | 0x1C 0x55 |
 
-  * FLASH programming address|
-  * FONT COLOR=magenta>Program Data|
+  * FLASH programming address (0x40008000)
+  * Size of Program Data (0x400)
+  * Program Data  (lots of bytes ....)
+
 
 Next address will be 0x40008400, 0x40008800, ...
 NOTE: There are two ranges: 0x4008000 - 0x4003FFF and 0x400C000 - 0x400C3FFF
