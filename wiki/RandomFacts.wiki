@@ -1,2 +1,3 @@
 Serial # in bootldr flash - 0x40007FFC
+
 Model Type in bootldr flash - 0x40007FF0
