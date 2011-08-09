@@ -23,6 +23,7 @@ No output is happening until you 'wake' it.
  and substracting this sum from 0x00000000 to get to the last 4 bytes that you need to write. You can predo this calculation<BR>
  before you start writing the firmware or as RL does it, you read all the data back in once you have written it, and then<BR>
  calc and write the flash key on its own. (FLASH programming function will allow you to write only 4 bytes as well)<BR>
+If the FLASH key is invalid, the device will stay in the bootldr mode.
 
 == Say Hello/Get Model type& serial # ==
 
