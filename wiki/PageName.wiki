@@ -8,10 +8,10 @@ No output is happening until you 'wake' it.
 
 = Steps =
 
-<LI>Say Hello/Get Model type & serial number
-<LI>Get the SEED from the device
-<LI>Send the calculated key back to the device. (this really unlocks the bootloader flash application)
-<LI>Erase the flash areas
-<LI>Upload the new firmware to 0x40008000 onwards.
-<LI>Save the FLASH-Key to 0x400C3FFC, without it the bootloader will not start the uploaded firmware
-<LI>Close communication (reboot device)
+*Say Hello/Get Model type & serial number
+*Get the SEED from the device
+*Send the calculated key back to the device. (this really unlocks the bootloader flash application)
+*Erase the flash areas
+*Upload the new firmware to 0x40008000 onwards.
+*Save the FLASH-Key to 0x400C3FFC, without it the bootloader will not start the uploaded firmware
+*Close communication (reboot device)
