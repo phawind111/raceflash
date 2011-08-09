@@ -21,8 +21,11 @@ Usually 3 files will be dumped:
 
 
 
-== RUF COMBINE HOWTO ==
+== RUF COMBINE HOWTO (create firmware image) ==
 
-./ruf_combine filename.RUF header chunk1 pad_4096.dat tail
+./ruf_combine filename.RUF header chunk21.dat chunk_30.dat pad_4096.dat tail
 
 will reassemble filename.RUF from the parts given, when u play with the IHEX file, make sure it contains DOS linebreaks (\r\n) (dos2unix helps) - as this is IHEX file convention ! (otherwise you want be able to flash it)
+
+BTW try using an older Driftbox Firmware (2056) with the "C00000000" chunk21.dat - it will run even on the PerformanceBox (but no Gyro ;-)
+They seem to have fixed that in the newer releases, but as the model type is in the flash ... well ;-)
