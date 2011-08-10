@@ -69,7 +69,7 @@ type of message 0x1 indicates that the unlock was successfull.
   * RX: 0xFF | 0x01 | 0x00 0x06 | 0x1C 0x55 |
 
   * sets the corresponding bits in the FLASH_CR1 register
-the RX message will happen when the actual erase has been done (1-2 secs) Repeat those message to clear all application flash areas (B0F5,B0F6,B0F7,B1F0,B1F1) by resendingwith values 0x10 0x00, 0x00 0x80, 0x00 0x40, 0x00 0x10.  
+the RX message will happen when the actual erase has been done (1-2 secs) Repeat those message to clear all application flash areas (B0F5,B0F6,B0F7,B1F0,B1F1) by resending with values 0x10 0x00, 0x00 0x80, 0x00 0x40, 0x00 0x20, 0x00 0x10.  
 
 
 
