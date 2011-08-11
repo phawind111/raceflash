@@ -237,7 +237,7 @@ int main(int argc, char * argv[])
        /* append ihex file end tag */
        strcat((char*)ptr, IHEX_END_TAG);
 
-       write_file_bin("/tmp/hex0", ptr, strlen((char*)ptr));
+     //  write_file_bin("/tmp/hex0", ptr, strlen((char*)ptr));
 
        rf=(struct ruf_file*)malloc(sizeof(struct ruf_file));
        rf->firmware=ptr;
