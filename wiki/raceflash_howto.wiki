@@ -3,7 +3,7 @@ Purpose:
 ========
 
 With this software you are able to update a Performance box, with either
-an original .RUF file or with an custom .hex file. 
+an original .RUF file or with an custom bin file. 
 This software is interfacing the existing bootloader (Racelogic Updater) 
 via an USB emulated serial port thats built into the device.
 
