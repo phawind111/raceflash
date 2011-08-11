@@ -1,3 +1,4 @@
+{{{
 Purpose:
 ========
 
@@ -68,3 +69,4 @@ Example1 - flashing a .RUF file
 (FLASH) Last chunk was at 0x400C3400
 (FLASH) Writing FLASH Key=0xE069288C - done
 (FLASH) Reseting device
+}}}
