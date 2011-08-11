@@ -98,6 +98,9 @@ int serial_send(int serial_fd, unsigned char msg_type, unsigned char *msg_buf, u
 #endif
 
  i=write(serial_fd, msg_buf, ts);
+#ifdef SERIAL_DEBUG
+ printf("Sent (%d)\n",i);
+#endif
 
  ts=serial_read(serial_fd, (unsigned char*)msg_buf, MAX_MSG_SIZE, 5);
 #ifdef SERIAL_DEBUG
@@ -164,6 +167,9 @@ unsigned int serial_read(int fd, unsigned char *buf, int buf_size, int timeout_s
      /* crc good ? */
      if ( (((crc>>8)&0xFF)==buf[msg_len-2]) &&  ((crc&0xFF)==buf[msg_len-1]) )
      {
+#ifdef SERIAL_DEBUG
+      printf("CRC good\n");
+#endif
       return(total_received);
      } 
      else
