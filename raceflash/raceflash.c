@@ -364,7 +364,7 @@ int main(int argc, char * argv[])
          if (rf_erase_flash(serial_fd))
          {
 	    rf_set_progress_bar(serial_fd, FLASH_0_SIZE);
-	    if (fsize < FLASH_1_SIZE)
+	    if (fsize < FLASH_0_SIZE)
             { 
               rf_programm_flash(serial_fd, hexbin_data, FLASH_0_LOW_ADDR, FLASH_0_LOW_ADDR + fsize -1);
             }
@@ -372,6 +372,7 @@ int main(int argc, char * argv[])
             {
               rf_programm_flash(serial_fd, hexbin_data, FLASH_0_LOW_ADDR, FLASH_0_HIGH_ADDR);
             }
+
 	    if (fsize > FLASH_0_SIZE) // check if have to programm FLASH_1
 	    {
              rf_set_progress_bar(serial_fd, FLASH_1_SIZE);	
